@@ -155,8 +155,6 @@ class GoogleBot:
             user_agent = UserAgent().random
         )
         self.page = await context.new_page()
-        # register the Playwright Stealth plugin
-        #await stealth_async(self.page)
         await self.page.goto(self.url,timeout=90000)
     
     # Scroll down the page to load more results
